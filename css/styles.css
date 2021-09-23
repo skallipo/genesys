@@ -1,10 +1,57 @@
-.nav {
-  background-color: navy;
+#title {
+  width: 25%;
+  float: left;
+  margin: 0;
+  height: 46px;
+  background-color: #333;
+  color: white;
 }
 
-body {
-  background-color: lightblue;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position:  relative;
+  top: 0;
+  right: 0;
+  width: 75%;
+  /*position: sticky;*/
 }
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+body {
+  background-color: darkgray;
+}
+
+#mainContent {
+  background-image: url("/img/road_forest.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  height: 1100px;
+}
+
+
 
 @media (max-width: 576px) {
   

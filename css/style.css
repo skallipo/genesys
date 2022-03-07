@@ -1,5 +1,15 @@
+/* add padding at the top so the nav bar isnt overlapping the picture */
 body::before {
   display: block;
   content: "";
   height: 60px;
 }
+
+/* add padding when scrolling so the navbar isnt overlapping the content */
+html {
+  scroll-padding-top: 70px;
+}
+
+/* .dropdown-menu {
+  min-width: 300px;
+} */

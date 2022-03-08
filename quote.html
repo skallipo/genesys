@@ -47,94 +47,334 @@
     </nav>
 
     <!-- Quote Form -->
+    <!-- Contact Info -->
     <section class="bg-dark p-5">
-        <div class="container d-flex bg-light align-items-center min-vh-100"> 
-            <div class="row g-0 justify-content-center">
+        <div class="container bg-light" id="formPage1"> 
+            <div class="row justify-content-center">
+                <div class="progress mx-0 px-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-25" role="progressbar" 
+                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
                 <!-- Title -->
-                <div class="col-lg-4 offset-lg-1 mx-0 px-0 bg-secondary">
+                <div class="col-lg-4 mx-0 p-2 bg-secondary text-center">
                     <div id="titleContainer">
-                        <img class="img-fluid" src="img\undraw_a_day_at_the_park.svg" alt="">
-                        <h2>Your Info</h2>
-                        <h3>Let's get to know you a little better</h3>
+                        <img class="img-fluid pb-2" src="img\undraw_a_day_at_the_park.svg" alt="">
+                        <h2>About You</h2>
+                        <h3>Tell us a little about yourself</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, id?</p>
                     </div>
                 </div>
-                <!-- Forms -->
-                <div class="col-lg-7 mx-0 px-0">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
-                    </div>
-                    <div id="qbox-container">
-                        <form class="needs-validation" id="form-wrapper" method="post" name="form-wrapper" novalidate>
-                            <div id="steps-container">
-                                <div class="step">
-                                    <div class="form-floating mb-3">
-                                        <label for="firstNameInput" class="form-label">First Name</label>
-                                        <input type="text" class="form-control" id="firstNameInput">
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <label for="lastNameInput" class="form-label">Last Name</label>
-                                        <input type="text" class="form-control" id="lastNameInput">
-                                    </div>
+                <!-- Form -->
+                <div class="col-lg-8 p-2 position-relative">
+                    <form class="needs-validation" id="form1" method="post" name="form-wrapper" novalidate>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="firstNameInput" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstNameInput">
                                 </div>
-                                <div class="step">
-                                    <div class="form-floating mb-3">
-                                        <label for="addressInput" class="form-label">Street Address</label>
-                                        <input type="text" class="form-control" id="addressInput">
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <label for="cityInput" class="form-label">City</label>
-                                        <input type="text" class="form-control" id="cityInput">
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <label for="zipcodeInput" class="form-label">Zipcode</label>
-                                        <input type="text" class="form-control" id="zipcodeInput">
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <label for="stateInput" class="form-label">State</label>
-                                        <input type="text" class="form-control" id="stateInput" disabled readonly>
-                                    </div>
+                                <div class="form-floating mb-3">
+                                    <label for="emailInput" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailInput">
                                 </div>
-                                <div class="step">
-                                    <div class="mb-3">
-                                        <label for="dobInput" class="form-label">Date of Birth</label>
-                                        <div class="input-group">
-                                            <input type="text" class="form-control" placeholder="MM" aria-label="Month">
-                                            <span class="input-group-text">/</span>
-                                            <input type="text" class="form-control" placeholder="DD" aria-label="Day">
-                                            <span class="input-group-text">/</span>
-                                            <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div id="success">
-                                    <div class="mt-5">
-                                        <h4>Success! We'll get back to you ASAP!</h4>
-                                        <p>Meanwhile, clean your hands often, use soap and water, or an alcohol-based hand rub, maintain a safe distance
-                                            from anyone who is coughing or sneezing and always wear a mask when physical distancing is not possible.</p>
-                                        <a class="back-link" href="">Go back from the beginning ➜</a>
+                                <div class="mb-3">
+                                    <label for="dobInput" class="form-label">Date of Birth</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="MM" aria-label="Month">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="DD" aria-label="Day">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
                                     </div>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-end">
-                                <button type="button" id="prev-btn" class="btn btn-primary">Previous<i class="bi bi-chevron-left"></i></button>
-                                <button type="button" id="next-btn" class="btn btn-primary">Next<i class="bi bi-chevron-right"></i></button>
-                                <button type="button" id="submit-btn" class="btn btn-primary">Submit</i></button>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="lastNameInput" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastNameInput">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumberInput">
+                                </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="row">
+                            <div class="form-floating mb-3">
+                                <label for="addressInput" class="form-label">Street Address</label>
+                                <input type="text" class="form-control" id="addressInput">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="form-floating mb-3">
+                                    <label for="cityInput" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="cityInput">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <label for="zipcodeInput" class="form-label">Zipcode</label>
+                                    <input type="text" class="form-control" id="zipcodeInput">
+                                </div>
+                                
+                            </div>
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <label for="stateInput" class="form-label">State</label>
+                                    <input type="text" class="form-control" id="stateInput" disabled readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
+                            <!-- <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button> -->
+                            <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
+                            <!-- <button type="button" id="submit-btn" class="btn btn-primary mx-2">Submit</i></button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vehicle Info -->
+        <div class="container bg-light" id="formPage2"> 
+            <div class="row justify-content-center">
+                <div class="progress mx-0 px-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-50" role="progressbar" 
+                        aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- Title -->
+                <div class="col-lg-4 mx-0 p-2 bg-dark text-center text-light">
+                    <div id="titleContainer">
+                        <img class="img-fluid pb-2" src="img\undraw_off_road.svg" alt="">
+                        <h2>Your Ride</h2>
+                        <h3>Tell us what are you driving?</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, id?</p>
                     </div>
+                </div>
+                <!-- Form -->
+                <div class="col-lg-8 p-2 position-relative">
+                    <form class="needs-validation" id="form2" method="post" name="form-wrapper" novalidate>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="firstNameInput" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstNameInput">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="emailInput" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dobInput" class="form-label">Date of Birth</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="MM" aria-label="Month">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="DD" aria-label="Day">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="lastNameInput" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastNameInput">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumberInput">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
+                            <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button>
+                            <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
+                            <!-- <button type="button" id="submit-btn" class="btn btn-primary mx-2">Submit</i></button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coverage Limits -->
+        <div class="container bg-light" id="formPage3"> 
+            <div class="row justify-content-center">
+                <div class="progress mx-0 px-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-75" role="progressbar" 
+                        aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- Title -->
+                <div class="col-lg-4 mx-0 p-2 bg-primary text-center">
+                    <div id="titleContainer">
+                        <img class="img-fluid pb-2" src="img\undraw_vehicle_sale_light.svg" alt="">
+                        <h2>Your Limits</h2>
+                        <h3>Tell us how much coverage you need</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, id?</p>
+                    </div>
+                </div>
+                <!-- Form -->
+                <div class="col-lg-8 p-2 position-relative">
+                    <form class="needs-validation" id="form1" method="post" name="form-wrapper" novalidate>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="firstNameInput" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstNameInput">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="emailInput" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dobInput" class="form-label">Date of Birth</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="MM" aria-label="Month">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="DD" aria-label="Day">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="lastNameInput" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastNameInput">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumberInput">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-floating mb-3">
+                                <label for="addressInput" class="form-label">Street Address</label>
+                                <input type="text" class="form-control" id="addressInput">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="form-floating mb-3">
+                                    <label for="cityInput" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="cityInput">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <label for="zipcodeInput" class="form-label">Zipcode</label>
+                                    <input type="text" class="form-control" id="zipcodeInput">
+                                </div>
+                                
+                            </div>
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <label for="stateInput" class="form-label">State</label>
+                                    <input type="text" class="form-control" id="stateInput" disabled readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
+                            <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button>
+                            <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
+                            <!-- <button type="button" id="submit-btn" class="btn btn-primary mx-2">Submit</i></button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sumbit Form -->
+        <div class="container bg-light" id="formPage4"> 
+            <div class="row justify-content-center">
+                <div class="progress mx-0 px-0">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-100" role="progressbar" 
+                        aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!-- Title -->
+                <div class="col-lg-4 mx-0 p-2 bg-secondary text-center">
+                    <div id="titleContainer">
+                        <img class="img-fluid pb-2" src="img\undraw_complete_design.svg" alt="">
+                        <h2>All Done!</h2>
+                        <h3>Just hit the submit button and that's it!</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, id?</p>
+                    </div>
+                </div>
+                <!-- Form -->
+                <div class="col-lg-8 p-2 position-relative">
+                    <form class="needs-validation" id="form1" method="post" name="form-wrapper" novalidate>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="firstNameInput" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstNameInput">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="emailInput" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="emailInput">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dobInput" class="form-label">Date of Birth</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="MM" aria-label="Month">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="DD" aria-label="Day">
+                                        <span class="input-group-text">/</span>
+                                        <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <label for="lastNameInput" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastNameInput">
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="phoneNumberInput">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-floating mb-3">
+                                <label for="addressInput" class="form-label">Street Address</label>
+                                <input type="text" class="form-control" id="addressInput">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <div class="form-floating mb-3">
+                                    <label for="cityInput" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="cityInput">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <label for="zipcodeInput" class="form-label">Zipcode</label>
+                                    <input type="text" class="form-control" id="zipcodeInput">
+                                </div>
+                                
+                            </div>
+                            <div class="col-2">
+                                <div class="form-floating mb-3">
+                                    <label for="stateInput" class="form-label">State</label>
+                                    <input type="text" class="form-control" id="stateInput" disabled readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
+                            <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button>
+                            <!-- <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button> -->
+                            <button type="button" id="submit-btn" class="btn btn-primary mx-2">Submit</i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
     
-    <div id="preloader-wrapper">
-        <div id="preloader"></div>
-        <div class="preloader-section section-left"></div>
-        <div class="preloader-section section-right"></div>
-    </div>
-
-
     <!-- Footer -->
     <footer class="p-5 bg-secondary position-relative">
         <div class="container">

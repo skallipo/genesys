@@ -47,9 +47,9 @@
     </nav>
 
     <!-- Quote Form -->
-    <!-- Contact Info -->
-    <section class="bg-dark p-5">
-        <div class="container bg-light" id="formPage1"> 
+    <section class="bg-dark p-5 position-relative min-vh-100">
+        <!-- Contact Info -->
+        <div class="container bg-light position-absolute top-0 start-50 translate-middle-x" id="formPage1"> 
             <div class="row justify-content-center">
                 <div class="progress mx-0 px-0">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-25" role="progressbar" 
@@ -70,12 +70,14 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <label for="firstNameInput" class="form-label">First Name</label>
+                                    
                                     <input type="text" class="form-control" id="firstNameInput">
+                                    <label for="firstNameInput" class="form-label">First Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <label for="emailInput" class="form-label">Email Address</label>
+                                    
                                     <input type="email" class="form-control" id="emailInput">
+                                    <label for="emailInput" class="form-label">Email Address</label>
                                 </div>
                                 <div class="mb-3">
                                     <label for="dobInput" class="form-label">Date of Birth</label>
@@ -90,45 +92,52 @@
                             </div>
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <label for="lastNameInput" class="form-label">Last Name</label>
+                                    
                                     <input type="text" class="form-control" id="lastNameInput">
+                                    <label for="lastNameInput" class="form-label">Last Name</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
+                                    
                                     <input type="text" class="form-control" id="phoneNumberInput">
+                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="form-floating mb-3">
-                                <label for="addressInput" class="form-label">Street Address</label>
-                                <input type="text" class="form-control" id="addressInput">
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="addressInput">
+                                    <label for="addressInput" class="form-label">Street Address</label>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-5">
                                 <div class="form-floating mb-3">
-                                    <label for="cityInput" class="form-label">City</label>
+                                    
                                     <input type="text" class="form-control" id="cityInput">
+                                    <label for="cityInput" class="form-label">City</label>
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="form-floating mb-3">
-                                    <label for="zipcodeInput" class="form-label">Zipcode</label>
+                                    
                                     <input type="text" class="form-control" id="zipcodeInput">
+                                    <label for="zipcodeInput" class="form-label">Zipcode</label>
                                 </div>
                                 
                             </div>
                             <div class="col-2">
                                 <div class="form-floating mb-3">
-                                    <label for="stateInput" class="form-label">State</label>
+                                    
                                     <input type="text" class="form-control" id="stateInput" disabled readonly>
+                                    <label for="stateInput" class="form-label">State</label>
                                 </div>
                             </div>
                         </div>
                         <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
                             <!-- <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button> -->
-                            <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
+                            <button type="button" id="nextButton1" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
                             <!-- <button type="button" id="submit-btn" class="btn btn-primary mx-2">Submit</i></button> -->
                         </div>
                     </form>
@@ -137,7 +146,7 @@
         </div>
 
         <!-- Vehicle Info -->
-        <div class="container bg-light" id="formPage2"> 
+        <div class="container bg-light position-absolute top-0 start-50 translate-middle-x" id="formPage2"> 
             <div class="row justify-content-center">
                 <div class="progress mx-0 px-0">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-50" role="progressbar" 
@@ -158,39 +167,69 @@
                         <div class="row">
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <label for="firstNameInput" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="firstNameInput">
+                                    <select type="text" class="form-select" id="yearInput">
+                                        <option selected>Select a year</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="yearInput" class="form-label">Year</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <label for="emailInput" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="emailInput">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="dobInput" class="form-label">Date of Birth</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="MM" aria-label="Month">
-                                        <span class="input-group-text">/</span>
-                                        <input type="text" class="form-control" placeholder="DD" aria-label="Day">
-                                        <span class="input-group-text">/</span>
-                                        <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
-                                    </div>
+                                    <select type="text" class="form-select" id="financingInput">
+                                        <option selected>Select your financing</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="financingInput" class="form-label">Financing</label>
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <label for="lastNameInput" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="lastNameInput">
+                                    <select type="text" class="form-select" id="makeInput">
+                                        <option selected>Select vehicle make</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="makeInput" class="form-label">Make</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" id="phoneNumberInput">
+                                    <select type="text" class="form-select" id="primaryUseInput">
+                                        <option selected>Select primary use</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="primaryUseInput" class="form-label">Primary Use</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-floating mb-3">
+                                    <select type="text" class="form-select" id="modelInput">
+                                        <option selected>Select vehicle model</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="modelInput" class="form-label">Model</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <select type="text" class="form-select" id="milageInput">
+                                        <option selected>Select your expected milage</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="milageInput" class="form-label">Average Milage</label>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
-                            <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button>
-                            <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
+                            <button type="button" id="prevButton1" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button>
+                            <button type="button" id="nextButton2" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
                             <!-- <button type="button" id="submit-btn" class="btn btn-primary mx-2">Submit</i></button> -->
                         </div>
                     </form>
@@ -199,7 +238,7 @@
         </div>
 
         <!-- Coverage Limits -->
-        <div class="container bg-light" id="formPage3"> 
+        <div class="container bg-light position-absolute top-0 start-50 translate-middle-x" id="formPage3"> 
             <div class="row justify-content-center">
                 <div class="progress mx-0 px-0">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-75" role="progressbar" 
@@ -218,64 +257,72 @@
                 <div class="col-lg-8 p-2 position-relative">
                     <form class="needs-validation" id="form1" method="post" name="form-wrapper" novalidate>
                         <div class="row">
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <label for="firstNameInput" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="firstNameInput">
+                            <div class="col-6">
+                                <h4>Will your current insurance expire in the next 7 days?</h4>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input type="radio" class="form-check-input" name="previousInsuranceRadio" id="previousInsuranceRadioYes" value="Yes">
+                                    <label for="previousInsuranceRadioYes" class="form-check-label">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline mb-3">
+                                    <input type="radio" class="form-check-input" name="previousInsuranceRadio" id="previousInsuranceRadioNo" value="No">
+                                    <label for="previousInsuranceRadioNo" class="form-check-label">No</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <label for="emailInput" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="emailInput">
+                                    <input type="text" class="form-control" id="currentProviderInput">
+                                    <label for="currentProviderInput" class="form-label">Current Insurance Provider</label>
                                 </div>
-                                <div class="mb-3">
-                                    <label for="dobInput" class="form-label">Date of Birth</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="MM" aria-label="Month">
-                                        <span class="input-group-text">/</span>
-                                        <input type="text" class="form-control" placeholder="DD" aria-label="Day">
-                                        <span class="input-group-text">/</span>
-                                        <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
-                                    </div>
+                                <div class="m-3">
+                                <div class="d-flex justify-content-between">
+                                    <label for="yearsWithProviderRange" class="form-label">0</label>
+                                    <label for="yearsWithProviderRange" class="form-label">1</label>
+                                    <label for="yearsWithProviderRange" class="form-label">2</label>
+                                    <label for="yearsWithProviderRange" class="form-label">3</label>
+                                    <label for="yearsWithProviderRange" class="form-label">4</label>
+                                    <label for="yearsWithProviderRange" class="form-label">5</label>
+                                    <label for="yearsWithProviderRange" class="form-label">6</label>
+                                    <label for="yearsWithProviderRange" class="form-label">7</label>
+                                    <label for="yearsWithProviderRange" class="form-label">8</label>
+                                    <label for="yearsWithProviderRange" class="form-label">9</label>
+                                    <label for="yearsWithProviderRange" class="form-label">10</label>
+                                </div>
+                                <input type="range" class="form-range" min="0" max="10" step="1" id="yearsWithProviderRange">
                                 </div>
                             </div>
                             <div class="col">
                                 <div class="form-floating mb-3">
-                                    <label for="lastNameInput" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="lastNameInput">
+                                    <select type="text" class="form-select" id="bodilyInujuryInput">
+                                        <option selected>Select an amount</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="bodilyInujuryInput" class="form-label">Bodily Injury Liability Coverage</label>
                                 </div>
                                 <div class="form-floating mb-3">
-                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" id="phoneNumberInput">
+                                    <select type="text" class="form-select" id="propertyDamageInput">
+                                        <option selected>Select an amount</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="propertyDamageInput" class="form-label">Property Damage Coverage</label>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-floating mb-3">
-                                <label for="addressInput" class="form-label">Street Address</label>
-                                <input type="text" class="form-control" id="addressInput">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-5">
+                                <div class="form-check form-switch m-3">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Uninsured Motorist Coverage</label>
+                                </div>
                                 <div class="form-floating mb-3">
-                                    <label for="cityInput" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="cityInput">
+                                    <select type="text" class="form-select" id="medicalPaymentsInput">
+                                        <option selected>Select an amount</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <label for="medicalPaymentsInput" class="form-label">Medical Payments Coverage</label>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <div class="form-floating mb-3">
-                                    <label for="zipcodeInput" class="form-label">Zipcode</label>
-                                    <input type="text" class="form-control" id="zipcodeInput">
-                                </div>
-                                
-                            </div>
-                            <div class="col-2">
-                                <div class="form-floating mb-3">
-                                    <label for="stateInput" class="form-label">State</label>
-                                    <input type="text" class="form-control" id="stateInput" disabled readonly>
-                                </div>
-                            </div>
-                        </div>
+                        
+                        
                         <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
                             <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button>
                             <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button>
@@ -287,7 +334,7 @@
         </div>
 
         <!-- Sumbit Form -->
-        <div class="container bg-light" id="formPage4"> 
+        <div class="container bg-light position-absolute top-0 start-50 translate-middle-x" id="formPage4"> 
             <div class="row justify-content-center">
                 <div class="progress mx-0 px-0">
                     <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary w-100" role="progressbar" 
@@ -307,63 +354,8 @@
                     <form class="needs-validation" id="form1" method="post" name="form-wrapper" novalidate>
                         <div class="row">
                             <div class="col">
-                                <div class="form-floating mb-3">
-                                    <label for="firstNameInput" class="form-label">First Name</label>
-                                    <input type="text" class="form-control" id="firstNameInput">
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <label for="emailInput" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control" id="emailInput">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="dobInput" class="form-label">Date of Birth</label>
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="MM" aria-label="Month">
-                                        <span class="input-group-text">/</span>
-                                        <input type="text" class="form-control" placeholder="DD" aria-label="Day">
-                                        <span class="input-group-text">/</span>
-                                        <input type="text" class="form-control" placeholder="YYYY" aria-label="Year">
-                                    </div>
-                                </div>
+                                <p>Please review your selections and hit submit when you are ready!</p>
                             </div>
-                            <div class="col">
-                                <div class="form-floating mb-3">
-                                    <label for="lastNameInput" class="form-label">Last Name</label>
-                                    <input type="text" class="form-control" id="lastNameInput">
-                                </div>
-                                <div class="form-floating mb-3">
-                                    <label for="phoneNumberInput" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" id="phoneNumberInput">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-floating mb-3">
-                                <label for="addressInput" class="form-label">Street Address</label>
-                                <input type="text" class="form-control" id="addressInput">
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-5">
-                                <div class="form-floating mb-3">
-                                    <label for="cityInput" class="form-label">City</label>
-                                    <input type="text" class="form-control" id="cityInput">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="form-floating mb-3">
-                                    <label for="zipcodeInput" class="form-label">Zipcode</label>
-                                    <input type="text" class="form-control" id="zipcodeInput">
-                                </div>
-                                
-                            </div>
-                            <div class="col-2">
-                                <div class="form-floating mb-3">
-                                    <label for="stateInput" class="form-label">State</label>
-                                    <input type="text" class="form-control" id="stateInput" disabled readonly>
-                                </div>
-                            </div>
-                        </div>
                         <div class="d-flex justify-content-center position-absolute bottom-0 start-50 translate-middle-x pb-5">
                             <button type="button" id="prev-btn" class="btn btn-primary mx-2"><i class="bi bi-chevron-left"></i>Back</button>
                             <!-- <button type="button" id="next-btn" class="btn btn-primary mx-2">Next<i class="bi bi-chevron-right"></i></button> -->

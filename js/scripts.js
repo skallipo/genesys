@@ -1,5 +1,3 @@
-
-
 // *** I couldnt get this to work without being flaky.  It would not scoll to the last section at all.
 /* function closeOnBlur() {
     console.log("Debug: Collapsing");
@@ -8,35 +6,74 @@
     collapsableNavbar.toggle();
 } */
 
-var form1 = document.getElementById("formPage1");
-var form2 = document.getElementById("formPage2");
-var form3 = document.getElementById("formPage3");
-var form4 = document.getElementById("formPage4");
 
-var nextButton1 = document.getElementById("nextButton1");
-var prevButton1 = document.getElementById("prevButton1");
+// ***************** Quote Form Code *******************************
+//Starting page index global variable
+var currentFormIndex = 0;
+//get all the buttons
+var nextButton = document.getElementById("nextButton");
+var prevButton = document.getElementById("prevButton");
+var submitButton = document.getElementById("submitButton");
+//get all the pages
+var formPages = document.getElementsByClassName("quote-form-container");
 
-form2.hidden = true;
-form3.hidden = true;
-form4.hidden = true;
+// Hide all of the form pages after page 1
+for (let i = 1; i < formPages.length; i++) {
+    formPages[i].hidden = true;
+}
+// initialize the buttons
+setButtonState(currentFormIndex);
 
-
-
-nextButton1.addEventListener("click", function () { 
-    nextForm(form1, form2);
+nextButton.addEventListener("click", function () { 
+    //console.log("Current Index Before: " + currentFormIndex.toString())
+    if (currentFormIndex < formPages.length) {
+        nextForm(formPages[currentFormIndex], formPages[currentFormIndex+1]);
+        currentFormIndex++;
+        //console.log("Current Index After: " + currentFormIndex.toString())
+    }
+    setButtonState(currentFormIndex);
 });
 
-
-prevButton1.addEventListener("click", function () { 
-    prevForm(form1, form2);
+prevButton.addEventListener("click", function () { 
+    //console.log("Current Index Before: " + currentFormIndex.toString())
+    if (currentFormIndex > 0) {
+        prevForm(formPages[currentFormIndex-1], formPages[currentFormIndex]);
+        currentFormIndex--;
+        //console.log("Current Index After: " + currentFormIndex.toString())
+    }
+    setButtonState(currentFormIndex);
 });
+
+function setButtonState(pageNum) {
+    if (pageNum == 0) {
+    nextButton.hidden = false;
+    prevButton.hidden = true;
+    submitButton.hidden = true;
+    }
+    else if (pageNum == formPages.length - 1) {
+        nextButton.hidden = true;
+        prevButton.hidden = false;
+        submitButton.hidden = false;
+    }
+    else {
+        nextButton.hidden = false;
+        prevButton.hidden = false;
+        submitButton.hidden = true;
+    }
+}
 
 function nextForm(f1, f2) {
+    //hide current
     f1.hidden = true;
+    //show next
     f2.hidden = false;
 }
 
 function prevForm(f1, f2) {
+    //show prev
     f1.hidden = false;
+    //hide current
     f2.hidden = true;
 }
+
+//***************** End Quote form code ******************************
